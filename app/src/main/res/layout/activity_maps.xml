@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/mbg"
+    tools:context=".MapsActivity">
+
+    <fragment
+        android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+    <AutoCompleteTextView
+        android:id="@+id/TFLocation"
+        android:backgroundTint="@color/dot_light_screen2"
+        android:drawableStart="@drawable/icon_search"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@drawable/roundbutton2"
+        android:ems="10"
+        android:inputType="textPersonName"  />
+
+    <Button
+        android:id="@+id/B_search"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:onClick="onClick"
+        android:text="RouteGen"
+        android:textSize="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/driving"
+                android:text="Driving"
+                android:checked="true"
+                android:onClick="checkDrive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/walking"
+                android:text="Walking"
+                android:onClick="checkWalk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/Cycling"
+                android:text="Cycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkCycle"/>
+            <RadioButton
+                android:id="@+id/Bike"
+                android:text="Bike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkBike"/>
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:text="Dynamic Routes (Disabled)"
+            android:textSize="8dp"
+            android:onClick="dynaRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <Button
+            android:id="@+id/back"
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goBack"
+            android:drawableStart="@drawable/icon_back"
+            android:text="Back"
+            android:textSize="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/zonein"
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="centre"
+            android:drawableStart="@drawable/centre_loc"
+            android:text="Centre"
+            android:textSize="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/reset"
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clearMap"
+            android:drawableStart="@drawable/icon_place"
+            android:text="Reset"
+            android:textSize="10dp"/>
+        <Button
+            android:id="@+id/button_ar"
+            android:drawableEnd="@drawable/ar_launch"
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="NavAR"
+            android:text="NavAR"
+            android:textSize="7dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/navg"
+    tools:context=".MainActivityInterlude">
+
+
+        tools:layout_editor_absoluteY="309dp" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/logo_main"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/getstarted"
+        android:background="@drawable/roundbutton"
+        android:drawableStart="@drawable/nav_icon"
+        android:drawableEnd="@drawable/nav_icon_2"
+        android:layout_marginTop="512dp"
+        android:layout_width="192dp"
+        android:layout_height="48dp"
+        android:text="Get Started"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/experimental"
+        android:background="@drawable/roundbutton"
+        android:drawableEnd="@drawable/nav_icon"
+        android:drawableStart="@drawable/nav_icon_2"
+        android:layout_marginTop="16dp"
+        android:layout_width="192dp"
+        android:layout_height="48dp"
+        android:text="Test"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</LinearLayout>
+
+</RelativeLayout>

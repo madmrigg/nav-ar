@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">NavAR_Mrigaya</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Locations!</string>
+    <string name="slide_1_desc">Choose your destination from where you are!</string>
+
+    <string name="slide_2_title">Navigation!</string>
+    <string name="slide_2_desc">Find the best route to your destination!</string>
+
+    <string name="slide_3_title">Augmented Reality</string>
+    <string name="slide_3_desc">Use AR technology for navigation assistance!</string>
+
+    <string name="slide_4_title">NavAR</string>
+    <string name="slide_4_desc">AN AR assisted navigation app for you!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string-array name="transPref">
+        <item>Walking</item>
+        <item>Driving</item>
+    </string-array>
+
+</resources>
